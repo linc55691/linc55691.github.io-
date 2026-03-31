@@ -1,0 +1,595 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>直播盒子下载_懂你live直播盒子_污贼直播盒子_鲍鱼直播盒子_桃色岛TV_美队TV</title>
+
+<meta name="keywords" content="直播盒子下载,懂你live直播盒子,污贼直播盒子,鲍鱼直播盒子,桃色岛TV,美队TV,影视软件,高清直播">
+<meta name="description" content="提供懂你live直播盒子、污贼直播盒子、鲍鱼直播盒子及桃色岛TV、美队TV下载,高清稳定不卡顿。">
+
+<style>
+
+  /* 全局样式 */
+ /* ===== 顶级下载按钮 ===== */
+.btn-super {
+  position: relative;
+  display: inline-block;
+  padding: 14px 36px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+  overflow: hidden;
+  background: linear-gradient(270deg, #ff416c, #ff4b2b, #ff416c);
+  background-size: 400% 400%;
+  box-shadow: 0 8px 25px rgba(255, 75, 43, 0.4);
+  transition: all 0.3s ease;
+  animation: gradientMove 6s ease infinite, glow 2s infinite;
+}
+
+/* 文字层 */
+.btn-super span {
+  position: relative;
+  z-index: 2;
+}
+
+/* 光扫效果（核心高级感） */
+.btn-super::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-25deg);
+}
+
+/* 悬停触发光扫 */
+.btn-super:hover::before {
+  left: 120%;
+  transition: all 0.6s ease;
+}
+
+/* 悬停放大 */
+.btn-super:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(255, 75, 43, 0.7);
+}
+
+/* 点击按压 */
+.btn-super:active {
+  transform: scale(0.95);
+}
+
+/* 渐变流动 */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 呼吸发光 */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(255,75,43,0.4); }
+  50% { box-shadow: 0 0 30px rgba(255,75,43,0.9); }
+  100% { box-shadow: 0 0 10px rgba(255,75,43,0.4); }
+}
+
+.btn-pro {
+  animation: glow 2s infinite;
+}
+  html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont;
+  background: #020617;
+  color: #fff;
+}
+
+/* 科技背景光效 */
+body::before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(59,130,246,0.25), transparent),
+    radial-gradient(circle at 80% 30%, rgba(168,85,247,0.25), transparent),
+    radial-gradient(circle at 50% 80%, rgba(14,165,233,0.2), transparent);
+  z-index: -1;
+}
+
+/* 精致圆形小 Logo + 科技发光 */
+.app-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 
+    0 0 12px rgba(59, 130, 246, 0.6),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.app-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.9),
+    0 6px 20px rgba(0, 0, 0, 0.4);
+}
+/* 底部固定悬浮栏 */
+.bottom-fixed-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  z-index: 9999;
+  backdrop-filter: blur(8px);
+}
+
+/* 主要按钮：立即下载（高亮科技蓝，更醒目） */
+.bottom-fixed-bar .btn-primary {
+  padding: 10px 28px;
+  margin-top: 0;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 14px rgba(59, 130, 246, 0.7);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.bottom-fixed-bar .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 22px rgba(59, 130, 246, 0.95);
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+}
+
+/* 次要按钮：购买卡密（淡紫渐变，功能区分） */
+.bottom-fixed-bar .btn-secondary {
+  padding: 10px 28px;
+  margin-top: 0;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 14px rgba(139, 92, 246, 0.7);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.bottom-fixed-bar .btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 22px rgba(139, 92, 246, 0.95);
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+}
+
+/* App 卡片容器：悬浮光效 */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease;
+}
+
+.app:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+/* 科技感下载按钮：浮动发光 */
+.btn {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.8),
+    0 6px 16px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+}
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 8px;
+}
+/* 底部固定悬浮栏 */
+.bottom-fixed-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  z-index: 9999;
+  backdrop-filter: blur(8px);
+}
+
+/* 给底部按钮单独加一点样式，和上面保持一致 */
+.bottom-fixed-bar .btn {
+  padding: 10px 24px;
+  margin-top: 0;
+}
+body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont;
+    background:#020617;
+    color:#fff;
+}
+
+/* 科技背景光效 */
+body::before{
+    content:'';
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(59,130,246,0.25),transparent),
+    radial-gradient(circle at 80% 30%,rgba(168,85,247,0.25),transparent),
+    radial-gradient(circle at 50% 80%,rgba(14,165,233,0.2),transparent);
+    z-index:-1;
+}
+
+/* 导航 */
+.nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+}
+.nav a{
+    color:#aaa;
+    margin-left:20px;
+    text-decoration:none;
+}
+
+/* 主屏 */
+.hero{
+    text-align:center;
+    padding:100px 20px 60px;
+}
+.hero h1{
+    font-size:40px;
+    background:linear-gradient(90deg,#38bdf8,#818cf8);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+.hero p{
+    color:#94a3b8;
+}
+
+/* 按钮 */
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:999px;
+    margin-top:15px;
+    text-decoration:none;
+    background:linear-gradient(135deg,#3b82f6,#6366f1);
+    color:#fff;
+}
+
+/* 区块 */
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+/* 卡片 */
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:30px;
+}
+
+/* 分类标题 */
+.title{
+    font-size:20px;
+    margin-bottom:20px;
+    color:#c7d2fe;
+}
+
+/* APP */
+.app-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+.app{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+.app p{
+    margin-bottom:10px;
+}
+
+/* 教程 */
+.text{
+    color:#cbd5f5;
+    line-height:1.8;
+}
+
+/* 客服 */
+.kefu{
+    text-align:center;
+}
+.kefu-box{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+}
+
+/* SEO */
+.seo-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
+}
+.seo-grid a{
+    background:rgba(255,255,255,0.05);
+    padding:10px;
+    border-radius:10px;
+    color:#93c5fd;
+    text-decoration:none;
+}
+
+/* 底部 */
+.footer{
+    text-align:center;
+    padding:60px 20px 100px;
+    color:#777;
+}
+
+/* 悬浮按钮 */
+.bottom-bar{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    display:flex;
+}
+.bottom-btn{
+    flex:1;
+    text-align:center;
+    padding:14px;
+    color:#fff;
+    text-decoration:none;
+}
+.download{
+    background:#3b82f6;
+}
+.buy{
+    background:#6366f1;
+}
+
+/* 手机适配 */
+@media (max-width:768px){
+.hero h1{font-size:26px;}
+.app-grid{grid-template-columns: repeat(2,1fr);}
+.nav{padding:15px;}
+}
+/* LOGO */
+.logo{
+    width:80px;
+    height:80px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(59,130,246,0.6);
+}
+.logo img{
+    width:100%;
+    height:100%;
+}
+
+/* 主按钮强化 */
+.main-btn{
+    font-size:16px;
+    padding:16px 40px;
+    background:linear-gradient(135deg,#06b6d4,#3b82f6);
+}
+</style>
+
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <!-- LOGO -->
+        <img src="logo.png" class="logo">
+      
+        <!-- 标题 -->
+        <h1>直播盒子下载平台</h1>
+      
+        <!-- 副标题 -->
+        <p class="sub">
+          高清直播 / 多线路 / 稳定不卡顿
+        </p>
+      
+        <!-- 按钮 -->
+        <a href="#download" class="btn-super">
+          <span>官方下载</span>
+        </a>
+      
+        <!-- 标签 -->
+        <div class="tags">
+          <span>✔ 永久免费</span>
+          <span>✔ 无广告</span>
+          <span>✔ 极速播放</span>
+        </div>
+      
+        <!-- 提示 -->
+        <p class="tip">
+          安卓iOS用户点击下载,安装后即可使用
+        </p>
+      
+        <!-- 氛围 -->
+        <p class="hot">
+          🔥 当前在线人数 10000+
+        </p>
+      
+      </header>
+      </a>
+        </a>
+    
+    </div>
+
+<!-- 分类 -->
+<!-- 分类 -->
+<div class="section" id="download" style="padding-top:80px; margin-top:-80px;"></div>
+    <div class="card">
+      <div class="title">📺 直播盒子下载</div>
+      <div class="app-grid">
+        <!-- 懂你live直播盒子 -->
+        <div class="app">
+          <img class="app-icon" src="logo1.png" alt="懂你live">
+          <p>懂你live直播盒子</p>
+          <a href="dongni.html" class="btn">下载</a>
+        </div>
+        <!-- 污贼直播盒子 -->
+        <div class="app">
+          <img class="app-icon" src="logo3.png" alt="污贼">
+          <p>污贼直播盒子</p>
+          <a href="wuzei.html" class="btn">下载</a>
+        </div>
+        <!-- 鲍鱼直播盒子 -->
+        <div class="app">
+          <img class="app-icon" src="logo2.png" alt="鲍鱼">
+          <p>鲍鱼直播盒子</p>
+          <a href="baoyu.html" class="btn">下载</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="title">🎬 影视TV下载</div>
+      <div class="app-grid">
+        <!-- 桃色岛TV -->
+        <div class="app">
+          <img class="app-icon" src="logo5.png" alt="桃色岛">
+          <p>桃色岛TV</p>
+          <a href="taosedao.html" class="btn">下载</a>
+        </div>
+        <!-- 美队TV -->
+        <div class="app">
+          <img class="app-icon" src="logo4.png" alt="美队TV">
+          <p>美队TV</p>
+          <a href="meidui.html" class="btn">下载</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 教程 -->
+<div class="section">
+<div class="card">
+<h2>下载教程与使用说明</h2>
+<div class="text">
+<p>1、点击下载按钮获取安装包</p>
+<p>2、安装完成后打开应用</p>
+<p>3、如遇卡顿请切换播放线路</p>
+<p>本平台提供高清直播盒子与影视软件，支持稳定播放不卡顿。</p>
+</div>
+</div>
+</div>
+
+<!-- 客服 -->
+<div class="section kefu">
+<div class="card">
+<h2>联系客服</h2>
+<div class="kefu-box">
+<p>QQ:123456789</p>
+<p>Telegram:@yourname</p>
+</div>
+</div>
+</div>
+
+<!-- SEO 20入口 -->
+<div class="section">
+<div class="card">
+<h2>相关推荐与下载入口</h2>
+<div class="seo-grid">
+<a href="gjc1.html">懂你live直播盒子下载</a>
+<a href="gjc2.html">污贼直播盒子安装教程</a>
+<a href="gjc3.html">鲍鱼直播盒子使用方法</a>
+<a href="gjc4.html">桃色岛TV下载教程</a>
+<a href="gjc5.html">美队TV安装方法</a>
+
+<a href="gjc6.html">直播盒子哪个好用</a>
+<a href="gjc7.html">高清直播软件推荐</a>
+<a href="gjc8.html">影视APP下载大全</a>
+<a href="gjc9.html">直播不卡顿解决方法</a>
+<a href="gjc10.html">电视直播软件推荐</a>
+
+<a href="gjc11.html">安卓直播软件下载</a>
+<a href="gjc12.html">影视软件哪个好</a>
+<a href="gjc13.html">直播软件合集推荐</a>
+<a href="gjc14.html">免费看片APP推荐</a>
+<a href="gjc15.html">直播盒子安装教程</a>
+
+<a href="gjc16.html">安卓影视软件推荐</a>
+<a href="gjc17.html">直播线路切换方法</a>
+<a href="gjc18.html">高清影视APP下载</a>
+<a href="gjc19.html">不卡直播软件推荐</a>
+<a href="gjc20.html">免费看片软件合集</a>
+</div>
+
+</div>
+</div>
+
+<!-- 隐藏SEO -->
+<div style="display:none">
+直播盒子下载,高清直播软件,影视APP推荐,安卓直播软件,免费看电视软件
+</div>
+
+<!-- 底部 -->
+<div class="footer">
+© 2026 XX科技
+</div>
+
+<!-- 底部固定悬浮栏 -->
+<div class="bottom-fixed-bar">
+    <a href="#" class="btn-primary">立即下载</a>
+    <a href="#" class="btn-secondary">购买卡密</a>
+  </div>
