@@ -473,54 +473,55 @@ img:hover, .logo:hover, .avatar:hover, .nav-icon i:hover {
   </a>
 </div>
 
- <!--首页 客服弹窗完整最终代码（适配原有样式） -->
+ <!-- 桃色岛TV首页 客服弹窗完整最终代码（修复Tidio不弹出问题） -->
 <div id="serviceModal">
-    <div class="service-window">
-      <h3 style="text-align:center;margin-bottom:15px;">欢迎咨询客服中心</h3>
-      <div class="service-item" onclick="openTidio();hideService();">
-        <img src="https://img.icons8.com/fluency/96/ffffff/customer-support.png" alt="在线客服">
-        <span>在线客服</span>
-      </div>
-      <a href="https://t.me/box226226" target="_blank" class="service-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram">
-        <span>Telegram飞机</span>
-      </a>
-      <button class="close-btn" onclick="hideService()">关闭</button>
+  <div class="service-window">
+    <h3 style="text-align:center;margin-bottom:15px;">欢迎咨询客服中心</h3>
+    <div class="service-item" onclick="openTidio();">
+      <img src="https://img.icons8.com/fluency/96/ffffff/customer-support.png" alt="在线客服">
+      <span>在线客服</span>
     </div>
+    <a href="https://t.me/box226226" target="_blank" class="service-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram">
+      <span>Telegram飞机</span>
+    </a>
+    <button class="close-btn" onclick="hideService()">关闭</button>
   </div>
-  
-  <!-- 客服交互脚本（适配首页样式，解决加载中问题） -->
-  <script>
-  function showService(){
-    document.getElementById("serviceModal").classList.add("show");
-  }
-  function hideService(){
-    document.getElementById("serviceModal").classList.remove("show");
-  }
-  // 点击空白处关闭弹窗
-  document.getElementById("serviceModal").onclick=function(e){
-    if(e.target===this) hideService();
-  }
-  // 在线客服触发Tidio（解决加载中问题）
-  function openTidio() {
-    if(window.tidioChatApi){
+</div>
+
+<!-- 客服交互脚本（修复Tidio不弹出问题） -->
+<script>
+function showService(){
+  document.getElementById("serviceModal").classList.add("show");
+}
+function hideService(){
+  document.getElementById("serviceModal").classList.remove("show");
+}
+// 点击空白处关闭弹窗
+document.getElementById("serviceModal").onclick=function(e){
+  if(e.target===this) hideService();
+}
+// 优化版openTidio：先加载Tidio，再关闭弹窗，彻底解决不弹出问题
+function openTidio() {
+  // 先加载Tidio脚本，确保完全加载后再打开
+  if(!window.tidioChatApi){
+    const script = document.createElement('script');
+    script.src = 'https://code.tidio.co/vrkjtrnfelp69vfdhqikez22tnf2xdj4.js';
+    script.onload = function() {
+      // 脚本加载完成后，先打开聊天，再关闭弹窗
       tidioChatApi.open();
       hideService();
-    } else {
-      const script = document.createElement('script');
-      script.src = 'https://code.tidio.co/vrkjtrnfelp69vfdhqikez22tnf2xdj4.js';
-      script.onload = function() {
-        tidioChatApi.open();
-        hideService();
-      };
-      document.body.appendChild(script);
-    }
+    };
+    document.body.appendChild(script);
+  } else {
+    // 已经加载过，直接打开
+    tidioChatApi.open();
+    hideService();
   }
-  </script>
-  
-  <!-- Tidio 在线客服嵌入代码（你的专属代码） -->
-  <script src="https://code.tidio.co/vrkjtrnfelp69vfdhqikez22tnf2xdj4.js" async></script>
-    </body>
-    </html>
+}
+</script>
+
+<!-- Tidio 在线客服嵌入代码（提前加载，确保本地也能弹） -->
+<script src="https://code.tidio.co/vrkjtrnfelp69vfdhqikez22tnf2xdj4.js" async></script>
 </body>
 </html>
