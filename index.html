@@ -473,11 +473,11 @@ img:hover, .logo:hover, .avatar:hover, .nav-icon i:hover {
   </a>
 </div>
 
-<!-- 桃色岛TV首页 客服弹窗最终修复版（解决点在线客服消失问题） -->
+<!-- 首页客服弹窗 极简稳定版 -->
 <div id="serviceModal">
   <div class="service-window">
     <h3 style="text-align:center;margin-bottom:15px;">欢迎咨询客服中心</h3>
-    <div class="service-item" onclick="openTidio();">
+    <div class="service-item" onclick="tidioChatApi.open();hideService();">
       <img src="https://img.icons8.com/fluency/96/ffffff/customer-support.png" alt="在线客服">
       <span>在线客服</span>
     </div>
@@ -489,7 +489,6 @@ img:hover, .logo:hover, .avatar:hover, .nav-icon i:hover {
   </div>
 </div>
 
-<!-- 客服交互脚本（终极修复版） -->
 <script>
 function showService(){
   document.getElementById("serviceModal").classList.add("show");
@@ -497,37 +496,12 @@ function showService(){
 function hideService(){
   document.getElementById("serviceModal").classList.remove("show");
 }
-
-// 点击空白处关闭弹窗
 document.getElementById("serviceModal").onclick=function(e){
-  if(e.target===this) hideService();
-}
-
-// 终极优化openTidio：先加载Tidio，成功弹出后再关闭弹窗
-function openTidio() {
-  // 1. 先检查Tidio是否已加载
-  if (window.tidioChatApi) {
-    // 2. 已加载：直接打开聊天，成功后关闭弹窗
-    tidioChatApi.open();
-    setTimeout(() => {
-      hideService();
-    }, 300); // 延迟300ms，确保Tidio窗口完全弹出
-  } else {
-    // 3. 未加载：先加载脚本，加载完成后打开再关闭
-    const script = document.createElement('script');
-    script.src = 'https://code.tidio.co/vrkjtrnfelp69vfdhqikez22tnf2xdj4.js';
-    script.onload = function() {
-      tidioChatApi.open();
-      setTimeout(() => {
-        hideService();
-      }, 300);
-    };
-    document.body.appendChild(script);
-  }
+  if(e.target === this) hideService();
 }
 </script>
 
-<!-- Tidio 在线客服嵌入代码（页面加载时预加载，确保点击秒弹） -->
+<!-- 只保留你自己的Tidio -->
 <script src="https://code.tidio.co/vrkjtrnfelp69vfdhqikez22tnf2xdj4.js" async></script>
 </body>
 </html>
