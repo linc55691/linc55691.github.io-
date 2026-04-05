@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>直播盒子稳定应用分享 - box226.com</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif;-webkit-tap-highlight-color:transparent;}
+        body{
+            background:linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            min-height:100vh;
+            color:#fff;
+            padding-bottom:90px;
+        }
+        .container{
+            width:95%;
+            max-width:700px;
+            margin:0 auto;
+            padding:20px 0;
+        }
+
+        /* 顶部LOGO（完全还原参考图样式） */
+        .top-header{
+            text-align:center;
+            padding:30px 0 25px;
+        }
+        .logo-box{
+            width:90px;
+            height:90px;
+            margin:0 auto 15px;
+            border-radius:24px;
+            overflow:hidden;
+            background:linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:36px;
+            font-weight:bold;
+            color:#fff;
+        }
+        .logo-box img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .top-header h1{
+            font-size:26px;
+            margin-bottom:8px;
+        }
+        .top-header .domain{
+            font-size:20px;
+            color:#39ff14;
+            font-weight:bold;
+        }
+        /* 顶部提示文案 */
+        .tip-row{
+            text-align:center;
+            font-size:14px;
+            line-height:1.8;
+            margin-top:10px;
+        }
+        .favorite-tip{
+            color:#ffcc00;
+            font-weight:bold;
+            margin-bottom:4px;
+        }
+        .cs-tip{
+            color:#ff9800;
+            font-weight:bold;
+        }
+
+        /* 应用板块：100%还原参考图的小圆形图标 */
+        .app-section{
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(10px);
+            border-radius:20px;
+            padding:25px;
+            margin-bottom:20px;
+        }
+        .section-title{
+            background:rgba(156,39,176,0.8);
+            display:inline-block;
+            padding:6px 18px;
+            border-radius:14px;
+            font-size:16px;
+            margin-bottom:25px;
+        }
+        .app-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:25px;
+            text-align:center;
+        }
+        .app-item{
+            cursor:pointer;
+        }
+        /* 核心：参考图同款小圆形图标 */
+        .app-icon{
+            width:55px;
+            height:55px;
+            border-radius:50%;
+            margin:0 auto 10px;
+            overflow:hidden;
+            background:rgba(0,0,0,0.2);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .app-icon img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .app-name{
+            font-size:14px;
+            margin-bottom:10px;
+            color:#fff;
+        }
+        .download-btn{
+            display:inline-block;
+            padding:5px 14px;
+            background:#4facfe;
+            border-radius:10px;
+            font-size:12px;
+            color:#fff;
+            text-decoration:none;
+        }
+
+        /* 底部真实访问统计 */
+        .stats-area{
+            text-align:center;
+            padding:15px 0;
+            font-size:14px;
+            color:rgba(255,255,255,0.7);
+            line-height:1.8;
+        }
+        .stats-area strong{
+            color:#39ff14;
+            font-weight:normal;
+        }
+
+        /* 底部导航：中间买卡密发光突出，不被遮挡 */
+        .bottom-nav{
+            position:fixed;
+            bottom:12px;
+            left:50%;
+            transform:translateX(-50%);
+            width:94%;
+            height:75px;
+            background:rgba(0,0,0,0.9);
+            backdrop-filter:blur(15px);
+            border-radius:20px;
+            display:flex;
+            align-items:center;
+            justify-content:space-around;
+            z-index:999;
+            padding:0 10px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.5);
+        }
+        .nav-item{
+            color:#fff;
+            text-decoration:none;
+            font-size:13px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:6px;
+        }
+        .nav-icon{
+            width:36px;
+            height:36px;
+            border-radius:10px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:19px;
+            color:#fff;
+        }
+        .nav-icon.kami{
+            width:52px;
+            height:52px;
+            border-radius:14px;
+            font-size:26px;
+            box-shadow:0 0 15px rgba(255,107,8,0.7);
+            background:linear-gradient(135deg,#ff6b08,#ff3d68);
+        }
+
+        .icon-home{background:linear-gradient(135deg,#42a5f5,#2196f3);}
+        .icon-service{background:linear-gradient(135deg,#4caf50,#8bc34a);}
+
+        /* 客服弹窗 */
+        #serviceModal{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.7);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            opacity:0;
+            pointer-events:none;
+            transition:opacity 0.3s ease;
+            z-index:9999;
+        }
+        #serviceModal.show{
+            opacity:1;
+            pointer-events:auto;
+        }
+        .service-window{
+            background:#1e293b;
+            border-radius:16px;
+            width:280px;
+            padding:22px;
+        }
+        .service-item{
+            display:flex;
+            align-items:center;
+            padding:12px;
+            margin:8px 0;
+            border-radius:10px;
+            font-size:14px;
+            color:#fff;
+            background:rgba(255,255,255,0.05);
+            text-decoration:none;
+            cursor:pointer;
+        }
+        .service-item img{
+            width:24px;
+            height:24px;
+            margin-right:10px;
+            border-radius:4px;
+        }
+        .close-btn{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            background:#7e57c2;
+            color:#fff;
+            border:none;
+            border-radius:10px;
+            font-size:14px;
+            cursor:pointer;
+        }
+    /* =============================================
+   全站顶级高级感：按钮+LOGO+头像 闪光+呼吸+微动
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 所有按钮、链接、导航项统一高级动画 */
+a, button, .nav-item, .buy-card-btn, [class*="download"], .btn {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
+  z-index: 1 !important;
+}
+
+/* 悬浮效果：上移 + 放大 + 发光阴影 */
+a:hover, button:hover, .nav-item:hover, .buy-card-btn:hover, [class*="download"]:hover, .btn:hover {
+  transform: translateY(-4px) scale(1.08) !important;
+  box-shadow: 0 8px 25px rgba(255, 60, 100, 0.25) !important;
+}
+
+/* 闪光扫光效果 */
+a:hover::before,
+button:hover::before,
+.nav-item:hover::before,
+.buy-card-btn:hover::before,
+[class*="download"]:hover::before,
+.btn:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shine 0.7s ease forwards;
+  z-index: -1;
+}
+@keyframes shine {
+  to { left: 100%; }
+}
+
+/* LOGO、头像、图片：呼吸发光 + 悬浮放大 */
+img, .logo, .avatar, .nav-icon i {
+  transition: all 0.4s ease !important;
+}
+img:hover, .logo:hover, .avatar:hover, .nav-icon i:hover {
+  transform: scale(1.15) !important;
+  filter: drop-shadow(0 0 12px rgba(255, 70, 110, 0.45)) !important;
+}
+
+/* 全局呼吸发光动画（一直轻微闪烁，高级感拉满） */
+.logo, .avatar, .buy-card-btn, [class*="download"] {
+  animation: breathe 2.8s infinite ease-in-out;
+}
+@keyframes breathe {
+  0%   { box-shadow: 0 0 8px rgba(255,70,110,0.15); }
+  50%  { box-shadow: 0 0 18px rgba(255,70,110,0.3); }
+  100% { box-shadow: 0 0 8px rgba(255,70,110,0.15); }
+}
+
+/* 买卡密按钮默认红色高亮 */
+.buy-card-btn,
+.buy-card-btn .nav-icon i {
+  color: #ff386a !important;
+  font-weight: bold !important;
+}
+    </style>
+
+    <!-- 真实访问统计脚本 -->
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <!-- Tidio在线客服脚本 -->
+    <script>
+        (function(){
+            var d=document.createElement('script');
+            d.src='//code.tidio.co/vrkjtrnfelp69vf4hqjkezx2tnf2xdj4.js';
+            document.head.appendChild(d);
+        })();
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部LOGO -->
+        <div class="top-header">
+            <div class="logo-box">
+                <img src="logo.png" alt="B26" onerror="this.parentElement.innerHTML='B26'">
+            </div>
+            <h1>直播盒子稳定应用分享</h1>
+            <div class="domain">www.box226.com</div>
+            <div class="tip-row">
+                <div class="favorite-tip">✅ 建议收藏 | 永久地址 | 永不失联 | 老司机不迷路</div>
+                <div class="cs-tip">💬 有任何问题，请点击右下角客服按钮</div>
+            </div>
+        </div>
+
+        <!-- 直播盒子板块：参考图同款小圆形图标 -->
+        <div class="app-section">
+            <div class="section-title">直播盒子</div>
+            <div class="app-grid">
+                <div class="app-item">
+                    <!-- 点击图标 → SEO优化页 -->
+                    <a href="/hezi/dongni-zhibo.html" class="app-icon">
+                        <img src="logo1.png" alt="懂你盒子">
+                    </a>
+                    <div class="app-name">懂你盒子</div>
+                    <!-- 点击下载 → 详情页 -->
+                    <a href="hezi/dongni-hezi.html" class="download-btn">下载</a>
+                </div>
+                <div class="app-item">
+                    <a href="/hezi/baoyu-zhibo.html" class="app-icon">
+                        <img src="logo2.png" alt="鲍鱼盒子">
+                    </a>
+                    <div class="app-name">鲍鱼盒子</div>
+                    <a href="/hezi/baoyu-hezi.html" class="download-btn">下载</a>
+                </div>
+                <div class="app-item">
+                    <a href="/hezi/wuzei-zhibo.html" class="app-icon">
+                        <img src="logo3.png" alt="污贼盒子">
+                    </a>
+                    <div class="app-name">污贼盒子</div>
+                    <a href="/hezi/wuzei-hezi.html" class="download-btn">下载</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 影视TV板块：参考图同款小圆形图标 -->
+        <div class="app-section">
+            <div class="section-title">影视TV</div>
+            <div class="app-grid" style="grid-template-columns:repeat(2,1fr);">
+                <div class="app-item">
+                    <a href="/hezi/taosedao-tv-1.html" class="app-icon">
+                        <img src="logo4.png" alt="桃色岛TV">
+                    </a>
+                    <div class="app-name">桃色岛TV</div>
+                    <a href="/hezi/taosedao-tv.html" class="download-btn">下载</a>
+                </div>
+                <div class="app-item">
+                    <a href="/hezi/meidui-tv-1.html" class="app-icon">
+                        <img src="logo5.png" alt="美队TV">
+                    </a>
+                    <div class="app-name">美队TV</div>
+                    <a href="/hezi/meidui-tv.html" class="download-btn">下载</a>
+                </div>
+            </div>
+        </div>
+        <!-- 底部真实统计 + 版权声明（完美融合版） -->
+<div class="stats-area">
+    <div>本站所有应用 <strong>官方正版 · 安全下载 · 无捆绑 · 持续更新</strong></div>
+    <div>
+      今日访问：<span id="busuanzi_value_page_pv">0</span>
+      &nbsp;&nbsp;累计访问：<span id="busuanzi_value_site_pv">0</span>
+    </div>
+    </div>
+
+    <!-- 底部导航 -->
+<div class="bottom-nav">
+  <a href="index.html" class="nav-item">
+    <div class="nav-icon icon-home">🏠</div>
+    <span>首页</span>
+  </a>
+ <!-- 跳转到buy-card.html页面 -->
+<a href="https://hailo.vip//links/58D7860F" class="nav-item buy-card-btn">
+    <div class="nav-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+    <span>买卡密</span>
+  </a>
+  <a href="javascript:showService()" class="nav-item">
+    <div class="nav-icon icon-service">💬</div>
+    <span>客服</span>
+  </a>
+</div>
+
+    <!-- 客服弹窗 -->
+    <div id="serviceModal">
+        <div class="service-window">
+            <h3 style="text-align:center;margin-bottom:15px;">联系客服</h3>
+            <div class="service-item" onclick="openTidio();hideService();">
+                <img src="https://cdn-icons-png.flaticon.com/512/1005/1005141.png" alt="在线客服">
+                <span>在线客服</span>
+            </div>
+            <a href="https://t.me/box226226" target="_blank" class="service-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram">
+                <span>Telegram</span>
+            </a>
+            <button class="close-btn" onclick="hideService()">关闭</button>
+        </div>
+    </div>
+
+    <!-- 客服交互脚本 -->
+    <script>
+        function showService(){
+            document.getElementById("serviceModal").classList.add("show");
+        }
+        function hideService(){
+            document.getElementById("serviceModal").classList.remove("show");
+        }
+        document.getElementById("serviceModal").onclick=function(e){
+            if(e.target===this) hideService();
+        }
+        function openTidio(){
+            if(window.tidioChatApi){
+                tidioChatApi.open();
+            }else{
+                alert("客服加载中，请稍候重试");
+            }
+        }
+    </script>
+</body>
+</html>
