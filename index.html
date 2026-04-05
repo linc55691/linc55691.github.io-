@@ -473,15 +473,14 @@ img:hover, .logo:hover, .avatar:hover, .nav-icon i:hover {
   </a>
 </div>
 
-<!-- 首页客服弹窗 · 你专属Tidio · 绝对能弹出版 -->
+<!-- 首页客服弹窗 · 纯官方Tidio内嵌版 -->
 <div id="serviceModal">
   <div class="service-window">
     <h3 style="text-align:center;margin-bottom:15px;">欢迎咨询客服中心</h3>
-    <a href="https://go.tidio.co/chat/visitor/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6InZya2p0cm5mZWxwbTZ5ZmTocWlrZXoyMnRueDJ4ZGoifQ=="
-       target="_blank" class="service-item">
+    <div class="service-item" onclick="tidioChatApi.open();hideService();">
       <img src="https://img.icons8.com/fluency/96/ffffff/customer-support.png" alt="在线客服">
       <span>在线客服</span>
-    </a>
+    </div>
     <a href="https://t.me/box226226" target="_blank" class="service-item">
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram">
       <span>Telegram飞机</span>
@@ -489,6 +488,8 @@ img:hover, .logo:hover, .avatar:hover, .nav-icon i:hover {
     <button class="close-btn" onclick="hideService()">关闭</button>
   </div>
 </div>
+
+<script src="https://code.tidio.co/vrkjtrnfelp69vfdhqikez22tnf2xdj4.js" async></script>
 
 <script>
 function showService(){
