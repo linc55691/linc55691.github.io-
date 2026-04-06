@@ -158,46 +158,163 @@ body{background:linear-gradient(135deg,#181a2a,#2a2c47,#3b3d6b,#585ba3);backgrou
   </button>
 </div>
 
-<!-- 懂你盒子 客服弹窗完整最终代码（零错误版） -->
+<!-- 🔘 打开客服按钮 -->
+<button onclick="showService()" style="position:fixed;right:20px;bottom:80px;z-index:9999;">
+  客服
+</button>
+
+<!-- 🪟 客服弹窗 -->
 <div id="serviceModal">
-  <div class="modal-box">
-    <div class="modal-title">懂你盒子客服中心</div>
-    <a href="https://t.me/box226226" target="_blank" class="modal-btn modal-tg">
-      <img src="https://img.icons8.com/fluency/96/ffffff/telegram-app.png" alt="Telegram客服">Telegram飞机
+  <div class="service-box">
+
+    <h3>联系客服</h3>
+
+    <!-- 在线客服 -->
+    <div class="service-item online" onclick="openTawkChat()">
+      <img src="https://img.icons8.com/fluency/48/customer-support.png"/>
+      <span>在线客服</span>
+    </div>
+
+    <!-- Telegram -->
+    <a href="https://t.me/box226226" target="_blank" class="service-item tg">
+      <img src="https://img.icons8.com/color/48/telegram-app--v1.png"/>
+      <span>Telegram 客服</span>
     </a>
-    <a href="javascript:openTidio();hideService();" class="modal-btn modal-online">
-      <img src="https://img.icons8.com/fluency/96/ffffff/customer-support.png" alt="在线客服">在线客服
-    </a>
-    <button class="modal-close" onclick="hideService()">关闭</button>
+
+    <button class="close-btn" onclick="hideService()">关闭</button>
+
   </div>
 </div>
 
+<!-- 🎨 样式（已防覆盖 + 高级UI） -->
+<style>
+#serviceModal {
+  position: fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  display:none;
+  background: rgba(0,0,0,0.6);
+  z-index:9999;
+}
+#serviceModal.show {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.service-box {
+  width:280px;
+  background:#fff;
+  border-radius:14px;
+  padding:20px;
+  text-align:center;
+}
+
+.service-box h3 {
+  margin-bottom:15px;
+}
+
+/* 按钮基础 */
+.service-item {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.25s;
+  font-weight:600;
+}
+
+/* 在线客服（高级渐变） */
+.service-item.online {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Telegram */
+.service-item.tg {
+  background: #0088cc;
+}
+
+/* 文字强制显示（防被覆盖） */
+.service-item span {
+  color:#fff !important;
+}
+
+/* 图标 */
+.service-item img {
+  width:26px;
+  height:26px;
+}
+
+/* 动效 */
+.service-item:hover {
+  transform: scale(1.05);
+  opacity:0.95;
+}
+
+.close-btn {
+  margin-top:10px;
+  padding:6px 12px;
+}
+</style>
+
+<!-- ⚙️ 脚本（稳定版） -->
 <script>
+// 打开弹窗
 function showService(){
   document.getElementById("serviceModal").classList.add("show");
 }
+
+// 关闭弹窗
 function hideService(){
   document.getElementById("serviceModal").classList.remove("show");
 }
+
+// 点击遮罩关闭
 document.getElementById("serviceModal").onclick=function(e){
   if(e.target===this) hideService();
-}
-function openTidio() {
-  if(window.tidioChatApi){
-    tidioChatApi.open();
-    hideService();
-  } else {
-    const script = document.createElement('script');
-    script.src = 'https://code.tidio.co/vrkjtrnfelp69vfdhqikez22tnf2xdj4.js';
-    script.onload = function() {
-      tidioChatApi.open();
-      hideService();
-    };
-    document.body.appendChild(script);
+};
+
+// ✅ 在线客服（核心）
+function openTawkChat(){
+
+  hideService();
+
+  // 已加载 → 直接打开
+  if (window.Tawk_API && window.Tawk_API.maximize) {
+    Tawk_API.maximize();
+    return;
   }
+
+  // 防重复加载
+  if (document.getElementById("tawk-script")) return;
+
+  // 初始化
+  window.Tawk_API = {};
+  window.Tawk_LoadStart = new Date();
+
+  // ⭐加载完成直接打开聊天窗口
+  window.Tawk_API.onLoad = function(){
+    Tawk_API.maximize();
+  };
+
+  const s=document.createElement("script");
+  s.id="tawk-script";
+  s.src="https://embed.tawk.to/69d3b1a0fd6e731c34ee29c1/1jlhermuo";
+  s.async=true;
+  s.charset="UTF-8";
+
+  document.body.appendChild(s);
 }
 </script>
 
-<script src="https://code.tidio.co/vrkjtrnfelp69vfdhqikez22tnf2xdj4.js" async></script>
+<!-- ❗彻底隐藏右下角图标 -->
+<style>
+iframe[title="chat widget"] {
+  display:none !important;
+}
+</style>
 </body>
 </html>
