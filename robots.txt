@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /images/
+Allow: /live/
+Allow: /tv/
+Allow: /hezi/
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /log/
+Sitemap: https://www.box226.com/sitemap.xml

@@ -1,0 +1,380 @@
+/* 全局通用样式 · 本地LOGO版 · 手机端优先 · 弹窗修复版 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: linear-gradient(180deg, #0A0E17 0%, #121826 50%, #0A0E17 100%);
+  color: #fff;
+  font-family: "Microsoft YaHei", sans-serif;
+  padding-bottom: 75px;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 20px 14px;
+  padding-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* 顶部标题 */
+.top-head {
+  text-align: center;
+  margin: 10px 0 30px;
+}
+.top-head h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+}
+.top-head .domain {
+  font-size: 15px;
+  color: #A0A8C0;
+  letter-spacing: 1px;
+}
+
+/* 分类标题 */
+.cat-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 26px 0 14px;
+  padding-left: 8px;
+  border-left: 4px solid #4A8DFF;
+  color: #FFFFFF;
+}
+
+/* 应用横向滚动 */
+.app-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+.app-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.app-item {
+  flex: 0 0 90px;
+  background: #161B2C;
+  border-radius: 16px;
+  padding: 14px 10px;
+  text-align: center;
+  border: 1px solid #1E2538;
+  transition: all 0.3s ease;
+}
+.app-item:hover {
+  transform: translateY(-5px);
+  background: #1C2235;
+  border-color: #4A8DFF;
+  box-shadow: 0 8px 20px rgba(74, 141, 255, 0.15);
+}
+
+/* 本地LOGO样式 */
+.app-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  margin: 0 auto 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(74, 141, 255, 0.2);
+}
+
+/* 应用名称多彩混插 */
+.name-baoyu {
+  font-size: 13px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #FF6B6B, #FF8E53);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.name-dongni {
+  font-size: 13px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #4ECDC4, #44A08D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.name-wuzei {
+  font-size: 13px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.name-juhe {
+  font-size: 13px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #A8E063, #56AB2F);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.name-taose {
+  font-size: 13px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #FF0080, #FF66A3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.name-meidui {
+  font-size: 13px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #7B4397, #DC2430);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.name-quanwang {
+  font-size: 13px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #00C9FF, #92FE9D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.name-languang {
+  font-size: 13px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #FC5C7D, #6A82FB);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 安全声明板块 */
+.safe-block {
+  margin: 30px 0 20px;
+  padding: 16px;
+  background: rgba(22, 27, 43, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(74, 141, 255, 0.2);
+  text-align: center;
+}
+.safe-tips {
+  font-size: 12px;
+  color: #8890AA;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* SEO正文板块 */
+.seo-block {
+  margin: 0 0 20px;
+  padding: 16px;
+  background: rgba(22, 27, 43, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(74, 141, 255, 0.2);
+  text-align: center;
+}
+.seo-desc {
+  font-size: 13px;
+  color: #AAB2CC;
+  line-height: 1.8;
+}
+
+/* 访问统计 */
+.view-count {
+  text-align: center;
+  font-size: 12px;
+  color: #77809E;
+  margin-bottom: 15px;
+}
+
+/* 友情链接 */
+.friend-links {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.links {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #161B2C;
+  border-radius: 20px;
+  border: 1px solid #1E2538;
+  font-size: 13px;
+  color: #99A3C2;
+  transition: all 0.3s ease;
+}
+.links:hover {
+  border-color: #4A8DFF;
+  color: #4A8DFF;
+  background: #1C2235;
+}
+
+/* ======================
+   底部按钮 · 彩色高亮 + 中间呼吸发光
+====================== */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  height: 75px;
+  background: #111524;
+  border-top: 1px solid #232A3D;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10px;
+  z-index: 9999;
+}
+
+.bottom-btn {
+  width: 30%;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* 首页按钮 - 青绿渐变 */
+.bottom-btn:nth-child(1) {
+  background: linear-gradient(135deg, #4ECDC4, #44A08D);
+  box-shadow: 0 3px 12px rgba(78,205,196,0.2);
+}
+.bottom-btn:nth-child(1):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(78,205,196,0.35);
+}
+
+/* 卡密按钮 - 红橙渐变 */
+.bottom-btn:nth-child(2) {
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  box-shadow: 0 3px 12px rgba(255,107,107,0.2);
+}
+.bottom-btn:nth-child(2):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(255,107,107,0.35);
+}
+
+/* 客服按钮 - 紫金渐变 + 呼吸发光 */
+.bottom-btn:nth-child(3) {
+  background: linear-gradient(135deg, #7B4397, #DC2430);
+  box-shadow: 0 3px 12px rgba(123,67,151,0.3);
+  animation: breatheGlow 2s infinite alternate ease-in-out;
+}
+.bottom-btn:nth-child(3):hover {
+  transform: translateY(-2px);
+}
+
+@keyframes breatheGlow {
+  from { box-shadow: 0 3px 12px rgba(123,67,151,0.3); }
+  to   { box-shadow: 0 0 22px rgba(220,36,48,0.5); }
+}
+
+.btn-icon {
+  font-size: 22px;
+  margin-bottom: 2px;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+.bottom-btn:hover .btn-icon {
+  transform: scale(1.1);
+}
+
+/* ======================
+   客服弹窗 · 修复版（彻底解决透明问题）
+====================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+}
+.modal-box {
+  background: #161B2C;
+  width: 85%;
+  max-width: 340px;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #232A3D;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  opacity: 1;
+  transform: translateZ(0);
+}
+.modal-title {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #4A8DFF;
+  font-weight: 600;
+}
+.modal-item {
+  background: #1F273A;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #fff;
+  border: 1px solid #232A3D;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.btn-close {
+  margin-top: 15px;
+  padding: 12px 30px;
+  background: #4A8DFF;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-close:hover {
+  background: #3A7DFF;
+  transform: scale(1.05);
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 480px) {
+  .bottom-bar {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+  .safe-block, .seo-block {
+    margin: 20px 0;
+    padding: 12px;
+  }
+}
