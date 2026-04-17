@@ -1,70 +1,292 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- 首页：最高优先级，每日更新 -->
-  <url>
-    <loc>https://www.box226.com/index.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.00</priority>
-  </url>
-  <!-- SEO引流页：高优先级，每日更新 -->
-  <url>
-    <loc>https://www.box226.com/seo.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <!-- 直播盒子分类页：高优先级，每周更新 -->
-  <url>
-    <loc>https://www.box226.com/live/index.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <!-- 影视TV分类页：高优先级，每周更新 -->
-  <url>
-    <loc>https://www.box226.com/tv/index.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <!-- 直播盒子详情页：中高优先级，每周更新 -->
-  <url>
-    <loc>https://www.box226.com/hezi/baoyu-hezi.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.box226.com/hezi/dongni-hezi.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.box226.com/hezi/wuzei-hezi.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <!-- 影视TV详情页：中优先级，每周更新 -->
-  <url>
-    <loc>https://www.box226.com/hezi/meidui-tv.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.box226.com/hezi/taosedao.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <!-- 卡密购买页：中优先级，每月更新 -->
-  <url>
-    <loc>https://www.box226.com/kami-buy.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
+
+<!-- 首页 -->
+<url>
+  <loc>https://linc55691.github.io/index.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+</url>
+
+<!-- live 页面 -->
+<url>
+  <loc>https://linc55691.github.io/live/baoyu-hezi.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/live/dongni-hezi.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/live/wuzei-hezi.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- tv 页面 -->
+<url>
+  <loc>https://linc55691.github.io/tv/meidui-tv.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/tv/taosedao-tv.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- 以下是你全部 40 个 SEO 页面，自动生成完毕 -->
+
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-hezi-1.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-hezi-2 .html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-hezi-3.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-hezi-4.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-hezi-5.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-hezi-6.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-hezi-7.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-hezi-8.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-hezi-9.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-hezi-10.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-jc-1.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-jc-2.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-jc-3.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-jc-4.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-jc-5.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-jc-6.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-jc-7.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-jc-8.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-jc-9.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/dongni-jc-10.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://linc55691.github.io/seo/meidui-tv-1.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/meidui-tv-2.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/meidui-tv-3.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/meidui-tv-4.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/meidui-tv-5.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/meidui-tv-6.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/meidui-tv-7.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/meidui-tv-8.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/meidui-tv-9.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/meidui-tv-10.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://linc55691.github.io/seo/zyzl-1.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/zyzl-2.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/zyzl-3.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/zyzl-4.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/zyzl-5.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/zyzl-6.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/zyzl-7.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/zyzl-8.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/zyzl-9.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://linc55691.github.io/seo/zyzl-10.html</loc>
+  <lastmod>2025-12-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
 </urlset>
