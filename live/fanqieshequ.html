@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>蕃茄社区2026最新版下载-安卓iOS通用安装包|官方最新下载地址</title>
+<meta name="keywords" content="蕃茄社区2026最新版,蕃茄社区官方下载地址,蕃茄社区安卓苹果安装,蕃茄社区最新资源">
+<meta name="description" content="蕃茄社区2026全新最新版资源更新，提供官方最新下载地址与备用下载链接，支持安卓、苹果iOS全机型安装，附带安装指导与常见使用问题说明。">
+<!--谷歌规范viewport，允许用户缩放-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+html,body{font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    background: #f8faff;
+    color: #1a2c3e;
+    line-height: 1.6;
+    padding-bottom: 90px;
+}
+/*顶部深蓝色导航栏：左返回箭头、中间标题*/
+.top-bar{
+    background: linear-gradient(125deg, #0b2b44 0%, #1a3a5f 45%, #0f2c48 100%);
+    display:flex;
+    align-items:center;
+    height:52px;
+    padding:0 16px;
+    position:relative;
+    overflow:hidden;
+}
+.top-bar::before {
+    content: "✨";
+    position: absolute;
+    font-size: 100px;
+    right: -20px;
+    top: -30px;
+    opacity: 0.07;
+    pointer-events: none;
+}
+.back-home{
+    color:#fff;
+    font-size:20px;
+    text-decoration:none;
+}
+.top-title{
+    flex:1;
+    text-align:center;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    padding-right:32px;
+}
+/*面包屑：蓝色条正下方*/
+.breadcrumb {
+    padding:12px 16px;
+    font-size:13px;
+    color:#666;
+    background:#fff;
+    margin:10px 16px;
+    border-radius:12px;
+}
+.breadcrumb a {
+    color:#1e6eb5;
+    text-decoration:none;
+}
+/*居中LOGO+应用名称*/
+.logo-wrap{
+    text-align:center;
+    margin:20px 0;
+}
+.site-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin:0 auto 10px;
+}
+.site-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.app-name{
+    font-size:22px;
+    font-weight:700;
+}
+/*横向双下载按钮*/
+.download-box{
+    display:flex;gap:14px;margin:0 16px 22px;
+}
+.dl-left{
+    flex:1;background:linear-gradient(95deg,#1e6eb5,#165a96);
+    color:#fff;text-align:center;padding:13px 0;border-radius:40px;font-size:15px;font-weight:700;
+    box-shadow:0 4px 8px rgba(0,0,0,0.05);
+}
+.dl-right{
+    flex:1;background:linear-gradient(95deg,#23a96c,#198552);
+    color:#fff;text-align:center;padding:13px 0;border-radius:40px;font-size:15px;font-weight:700;
+    box-shadow:0 4px 8px rgba(0,0,0,0.05);
+}
+/*信息卡片*/
+.info-item{
+    background:#fff;margin:0 16px 14px;border-radius:16px;padding:16px 20px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.04);
+}
+.info-title{
+    font-weight:700;font-size:15px;margin-bottom:6px;display:flex;align-items:center;gap:6px;
+}
+.info-text{font-size:13px;color:#444;line-height:1.6;}
+/*FAQ*/
+.faq-wrap {
+    margin: 30px 16px;
+}
+.faq-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    padding-left: 14px;
+    position: relative;
+}
+.faq-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 24px;
+    background: linear-gradient(135deg, #1e6eb5, #235b8f);
+    border-radius: 10px;
+}
+.faq-item {
+    background: #fff;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    overflow: hidden;
+}
+.faq-q {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0b2b44;
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-q i {
+    transition: transform 0.3s ease;
+    color: #1e6eb5;
+}
+.faq-q.open i {
+    transform: rotate(180deg);
+}
+.faq-a {
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.6;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.faq-item.open .faq-a {
+    padding: 0 20px 18px;
+    max-height: 300px;
+}
+/*底部导航原版样式*/
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 -8px 30px rgba(30, 87, 153, 0.12);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    z-index: 1200;
+    border-top: 1px solid rgba(30, 110, 181, 0.2);
+}
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #94a9bf;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 40px;
+    gap: 5px;
+    flex: 1;
+}
+.nav-item i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1.6rem !important;
+    margin-bottom: 3px;
+}
+.nav-item.active {
+    color: #1e6eb5;
+    background: rgba(30, 110, 181, 0.08);
+}
+.nav-cart i { color: #e53e3e !important; }
+.nav-order i { color: #23a96c !important; }
+.nav-service i { color: #f59e0b !important; }
+a{text-decoration:none;color:inherit;}
+</style>
+</head>
+<body>
+<!--1.顶部深蓝条：左箭头返回首页、中间文字-->
+<div class="top-bar">
+    <a href="/index.html" class="back-home"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="top-title">蕃茄社区2026最新版</div>
+</div>
+
+<!--2.面包屑-->
+<div class="breadcrumb">
+    <a href="https://www.box226.com/">首页</a> / <span>蕃茄社区2026最新版详情</span>
+</div>
+
+<!--3.居中LOGO+名称 图片路径：../uploads/shishi.png-->
+<div class="logo-wrap">
+    <div class="site-logo">
+        <img src="../uploads/fanqieshequ.png" alt="蕃茄社区图标">
+    </div>
+    <div class="app-name">蕃茄社区2026最新版</div>
+</div>
+
+<!--4.一行两个下载按钮-->
+<div class="download-box">
+    <a href="https://i-share.tomaco.vip/?a=IyNjeXF3Zm4jIzFhbGJoNyMjMTgjIw==&shareFlag=1#/" target="_blank" class="dl-left">官方最新下载地址</a>
+    <a href="https://i-share.tomaco.vip/?a=IyNjeXF3Zm4jIzFhbGJoNyMjMTgjIw==&shareFlag=1#/" target="_blank" class="dl-right">备用最新下载地址</a>
+</div>
+
+<!--公告卡片-->
+<div class="info-item">
+    <div class="info-title"><i class="fa-solid fa-bullhorn" style="color:#c52828"></i>最新公告</div>
+    <div class="info-text">更新日期：【2026.06.05】<br>蕃茄社区2026最新版资源已全部更新完毕，同步更新官方最新下载地址<br>软件内各类广告与本站无关，谨慎甄别各类付费推广内容</div>
+</div>
+
+<!--温馨提示-->
+<div class="info-item">
+    <div class="info-title"><i class="fa-solid fa-triangle-exclamation" style="color:#f59e0b"></i>温馨提示</div>
+    <div class="info-text">软件部分专属内容需升级至2026最新版即可正常浏览，可通过上方最新下载地址获取安装包。</div>
+</div>
+
+<!--软件介绍-->
+<div class="info-item">
+    <div class="info-title"><i class="fa-solid fa-circle-info" style="color:#1e6eb5"></i>软件产品介绍</div>
+    <div class="info-text">
+        • 1.2026最新版适配安卓、苹果全机型系统<br>
+        • 2.海量在线频道资源，高清流畅播放<br>
+        • 3.支持在线互动、私信交流功能
+    </div>
+</div>
+
+<!--FAQ-->
+<div class="faq-wrap">
+    <div class="faq-title">❔ 常见FAQ</div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">1、蕃茄社区2026最新版适配哪些手机系统？<i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">安卓全版本、苹果iOS系统都可以正常安装使用。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">2、安装提示无法安装怎么处理？<i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">安卓开启未知来源安装，苹果使用证书信任后，通过最新下载地址重新安装。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">3、在哪里获取蕃茄社区2026最新版？<i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">页面上方提供官方最新下载地址与备用地址，点击即可获取最新安装包。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">4、链接打不开获取不了安装包怎么办？<i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">优先切换备用最新下载地址，平台会持续实时更新有效资源链接。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">5、软件闪退打不开如何解决？<i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">卸载旧版本清理缓存，使用最新下载地址重装2026最新版安装包。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">6、备用下载地址失效怎么处理？<i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">返回首页查看实时更新的2026最新下载地址。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">7、如何查询历史下载相关记录？<i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">底部导航点击查询订单，填写相关信息即可查看过往下载记录。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">8、软件内付费广告靠谱吗？<i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">软件内广告内容和本站无关，不建议随意在软件内进行付费操作。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">9、新版本能否多台设备同时登录？<i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">单账号仅限一台设备登录，多设备同时登录会限制软件使用权限。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">10、后续更新需要重新下载安装吗？<i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">新版本上线后，通过页面最新下载地址覆盖安装即可，原有账号数据保留。</div>
+    </div>
+</div>
+
+<!--底部导航-->
+<div class="bottom-nav">
+    <a href="/index.html" class="nav-item active">
+        <i class="fa-solid fa-home"></i>
+        <span>首页</span>
+    </a>
+    <a href="https://hailo.vip/links/58D7860F" class="nav-item nav-cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>购买卡密</span>
+    </a>
+    <a href="https://shop.sea-snails.com/orderquery" class="nav-item nav-order">
+        <i class="fa-solid fa-file-invoice"></i>
+        <span>订单查询</span>
+    </a>
+    <a href="../service/kefu.html" class="nav-item nav-service">
+        <i class="fa-solid fa-circle-question"></i>
+        <span>使用帮助</span>
+    </a>
+</div>
+
+<script>
+function toggleFaq(el){
+    let wrap = el.parentElement;
+    wrap.classList.toggle("open");
+    el.classList.toggle("open");
+}
+</script>
+</body>
+</html>
