@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no,email=no">
     <title>直播宝盒聚合平台｜正版直播盒子下载入口 www.box226.com</title>
-    <!-- 图标 带版本防缓存 -->
+    <!-- 网址栏图标 favicon 全套 -->
     <link rel="icon" href="/favicon.ico?v=2026060303" type="image/x-icon">
     <link rel="shortcut icon" href="/favicon.ico?v=2026060303" type="image/x-icon">
     <link rel="apple-touch-icon" href="/favicon.ico?v=2026060303">
@@ -46,11 +46,14 @@
         img{max-width: 100%; height: auto;}
         /* 底部导航预留高度，防止内容被遮挡 */
         body{padding-bottom: 70px; box-sizing: border-box;}
+        /* 返回顶部默认隐藏 */
+        .back-top{display: none;}
+        .back-top.show{display: flex; position: fixed; right:16px; bottom:80px; width:40px; height:40px; border-radius:50%; background:#333; color:#fff; align-items:center; justify-content:center; z-index:99;}
     </style>
     <!-- Font Awesome 图标库 -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- 谷歌统计 保留原版 -->
+    <!-- 谷歌统计 完整保留 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-14968905742"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -196,7 +199,7 @@
         <i class="fas fa-chevron-up"></i>
     </div>
 
-    <!-- 底部导航 -->
+    <!-- 底部导航（客服页面链接保留，但无Tawk弹窗脚本） -->
     <div class="bottom-nav">
         <a href="./index.html" class="nav-item active">
             <i class="fas fa-home"></i>
