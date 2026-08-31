@@ -95,7 +95,7 @@ svg.icon {
     justify-content: center;
 }
 
-/* ===================== 首页轮播 promo ===================== */
+/* ===================== 首页轮播 promo【已修复】 ===================== */
 .promo-wrap {
     margin: 14px 0;
 }
@@ -107,10 +107,10 @@ svg.icon {
 }
 .promo-track {
     display: flex;
-    width: 300%;
+    overflow‑x: hidden;
 }
 .promo-slide {
-    width: 33.333%;
+    flex: 0 0 100%;
 }
 .promo-noclick {
     width: 100%;
