@@ -1,5 +1,0 @@
-User-agent: Baiduspider
-Allow: /
-Allow: /uploads/
-Disallow: /css/
-Sitemap: /sitemap.xml
