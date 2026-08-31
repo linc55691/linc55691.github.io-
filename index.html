@@ -57,14 +57,14 @@
     <!-- 外部CSS，保持原有相对路径不修改 -->
     <link rel="stylesheet" href="./css/style.css">
 <style>
-/* 修复跑马灯只能跑到中间，文字截断看不到尾部 */
+/*跑马灯：速度调慢，30秒一圈，双文本无缝无留白*/
 .marquee-wrap{overflow:hidden;width:100%;}
-.marquee-bar{display:flex;align-items:center;gap:12px;white-space:nowrap;}
+.marquee-bar{display:flex;align-items:center;gap:12px;}
 .marquee-track{width:100%;overflow:hidden;}
-.marquee-content{display:inline-block;animation:marqueeMove 18s linear infinite;}
+.marquee-content{display:inline-block;white-space:nowrap;animation:marqueeMove 30s linear infinite;}
 @keyframes marqueeMove {
-  0%{transform:translateX(100%);}
-  100%{transform:translateX(-100%);}
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
 }
 </style>
 </head>
@@ -104,6 +104,7 @@
         </div>
     </div>
 </div>
+
 <div class="marquee-wrap">
     <div class="marquee-bar">
         <span class="marquee-icon">
@@ -118,10 +119,6 @@
 <span>所有软件内广告切勿点击，不要相信各类充值诱导，请勿进行任何充值消费！凡是因软件内部广告充值被骗，全部损失均与本站无关，请提高警惕谨防受骗。</span>
 <span>所有软件内广告切勿点击，不要相信各类充值诱导，请勿进行任何充值消费！凡是因软件内部广告充值被骗，全部损失均与本站无关，请提高警惕谨防受骗。</span>
             </div>
-        </div>
-    </div>
-</div>
-
         </div>
     </div>
 </div>
@@ -306,6 +303,7 @@ function toggleCollapse(el){
     icon.textContent = body.classList.contains("open") ? "−" : "+";
 }
 </script>
+<!-- 轮播不自动播：检查你的js/main.js文件，文件损坏/缺失就不会自动轮播 -->
 <script src="./js/main.js"></script>
 </body>
 </html>
