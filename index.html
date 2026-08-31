@@ -7,194 +7,301 @@
     <!-- SEO主标签｜精简无堆砌 -->
     <title>直播盒子官网|懂你live盒子,直播APP下载与卡密服务</title>
     <meta name="description" content="直播盒子官网提供多款优质聚合直播与影视APP下载,包含懂你live盒子、污贼live盒子、鲍鱼盒子、橙果TV激活服务，支持月卡、季卡、年卡卡密、邀请码开通使用，提供安全正规下载渠道。">
-    <meta name="keywords" content="直播盒子,聚合直播盒子,懂你live盒子,污贼live盒子,鲍鱼盒子,橙果TV,影视盒子,APP卡密">
+    <meta name="keywords" content="直播盒子,聚合直播盒子,懂你live盒子,污贼live盒子,鲍鱼盒子,橙果TV,影视TV,直播APP下载,影视盒子,卡密,邀请码,月卡,季卡,年卡">
+
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://www.box226.com/">
 
-    <!-- 引用全局公共css -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- 搜索引擎验证占位，验证后替换xxx -->
+    <meta name="baidu-site-verification" content="xxx">
+    <meta name="360-site-verification" content="xxx">
+    <meta name="sogou-site-verification" content="xxx">
+
+    <!-- 图标：完全移除ico，只用PNG，兼容浏览器、手机、社交爬虫 -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://www.box226.com/images/favicon-192.png">
+    <link rel="apple-touch-icon" href="https://www.box226.com/images/favicon-192.png" sizes="192x192">
+
+    <!-- OpenGraph ｜TG / QQ / X推特 社交卡片，全部绝对HTTPS -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.box226.com/">
+    <meta property="og:title" content="直播盒子官网｜聚合直播盒子下载">
+    <meta property="og:description" content="直播盒子官方站点，提供各类盒子APP最新版下载，包含懂你live、污贼live、鲍鱼盒子、橙果TV，支持卡密邀请码办理，认准本站域名远离仿冒钓鱼网站。">
+    <meta property="og:image" content="https://www.box226.com/images/share-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="直播盒子官网">
+
+    <!-- Twitter‑X卡片 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.box226.com/">
+    <meta name="twitter:title" content="直播盒子｜卡密邀请码办理">
+    <meta name="twitter:description" content="提供年卡、季卡、月卡卡密与邀请码服务，多款直播盒子资源可供选用。">
+    <meta name="twitter:image" content="https://www.box226.com/images/share-cover.jpg">
+
+    <!-- 结构化属性 -->
+    <meta itemprop="name" content="直播盒子官网">
+    <meta itemprop="description" content="一站式聚合直播盒子平台，汇集多款影视、直播类应用资源。">
+    <meta itemprop="image" content="https://www.box226.com/images/share-cover.jpg">
+
+    <!-- JSON‑LD 结构化数据 首页 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "直播盒子官网",
+        "url": "https://www.box226.com/",
+        "description": "直播盒子综合资源站，整理多款直播及影视类APP下载与激活服务。"
+    }
+    </script>
+
+    <!-- 外部CSS，保持原有相对路径不修改 -->
+    <link rel="stylesheet" href="./css/style.css">
+<style>
+/* 修复跑马灯只能跑到中间，文字截断看不到尾部 */
+.marquee-wrap{overflow:hidden;width:100%;}
+.marquee-bar{display:flex;align-items:center;gap:12px;white-space:nowrap;}
+.marquee-track{width:100%;overflow:hidden;}
+.marquee-content{display:inline-block;animation:marqueeMove 18s linear infinite;}
+@keyframes marqueeMove {
+  0%{transform:translateX(100%);}
+  100%{transform:translateX(-100%);}
+}
+</style>
 </head>
 <body>
 <div class="page-shell">
 
-    <!--顶部标题栏-->
-    <div class="topbar">
-        <div class="topbar-title">
-            <img class="topbar-logo" src="images/logo.png" alt="logo">
-            直播盒子官网
-        </div>
+<div class="topbar">
+    <div class="topbar-title">
+        <img class="topbar-logo" src="./images/logo.PNG" alt="直播盒子官网">
+        直播盒子官网
     </div>
+</div>
 
-    <!--轮播图区域 ID严格对应JS，图片lunbo‑1.jpg -->
-    <div class="promo-wrap">
-        <div class="promo-carousel">
-            <div id="promoTrack" class="promo-track">
-                <div class="promo-slide">
-                    <div class="promo-noclick">
-                        <img src="images/lunbo-1.jpg" alt="轮播图1">
-                    </div>
-                </div>
-                <div class="promo-slide">
-                    <div class="promo-noclick">
-                        <img src="images/lunbo-2.jpg" alt="轮播图2">
-                    </div>
-                </div>
-                <div class="promo-slide">
-                    <div class="promo-noclick">
-                        <img src="images/lunbo-3.jpg" alt="轮播图3">
-                    </div>
+<div class="promo-wrap">
+    <div class="promo-carousel">
+        <div class="promo-track" id="promoTrack">
+            <div class="promo-slide">
+                <div class="promo-noclick">
+                    <img src="images/lunbo-1.jpg" alt="直播盒子官网首页" width="750" height="360" loading="lazy" decoding="async">
                 </div>
             </div>
-            <div id="promoDots" class="promo-dots">
-                <span class="active"></span>
-                <span></span>
-                <span></span>
+            <div class="promo-slide">
+                <div class="promo-noclick">
+                    <img src="images/lunbo-2.jpg" alt="多款直播盒子卡密服务" width="750" height="360" loading="lazy" decoding="async">
+                </div>
             </div>
-        </div>
-    </div>
-
-    <!--跑马灯公告-->
-    <div class="marquee-wrap">
-        <div class="marquee-bar">
-            <div class="marquee-icon">📢</div>
-            <div class="marquee-track">
-                <div class="marquee-content">
-                    官方正品卡密｜售后在线服务｜谨防假冒网站｜如有问题联系客服
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    官方正品卡密｜售后在线服务｜谨防假冒网站｜如有问题联系客服
+            <div class="promo-slide">
+                <div class="promo-noclick">
+                    <img src="images/lunbo-3.jpg" alt="直播APP下载入口" width="750" height="360" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
-    </div>
-
-    <!--TG入口横幅-->
-    <div class="tg-banner">
-        <a href="#">点击进入官方TG频道</a>
-    </div>
-
-    <!--APP列表，全部原有产品完整恢复-->
-    <div class="content">
-        <div class="category-section">
-            <div class="category-head">
-                <h2 class="category-title">产品下载</h2>
-            </div>
-            <div class="category-subtitle">选择对应APP查看详情</div>
-            <div class="app-grid">
-                <a href="detail.html" class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app1.png" alt="">
-                    </div>
-                    <div class="app-card-name">懂你Live盒子</div>
-                    <div class="app-desc">月/季/年卡</div>
-                    <span class="app-btn">前往详情</span>
-                </a>
-                <a href="detail.html" class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app2.png" alt="">
-                    </div>
-                    <div class="app-card-name">污贼Live盒子</div>
-                    <div class="app-desc">月/季/年卡</div>
-                    <span class="app-btn">前往详情</span>
-                </a>
-                <a href="detail.html" class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app3.png" alt="">
-                    </div>
-                    <div class="app-card-name">鲍鱼盒子</div>
-                    <div class="app-desc">月/季/年卡</div>
-                    <span class="app-btn">前往详情</span>
-                </a>
-                <a href="detail.html" class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app4.png" alt="">
-                    </div>
-                    <div class="app-card-name">橙果TV</div>
-                    <div class="app-desc">月/季/年卡</div>
-                    <span class="app-btn">前往详情</span>
-                </a>
-                <a href="detail.html" class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app5.png" alt="">
-                    </div>
-                    <div class="app-card-name">多彩盒子</div>
-                    <div class="app-desc">月/季/年卡</div>
-                    <span class="app-btn">前往详情</span>
-                </a>
-                <a href="detail.html" class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app6.png" alt="">
-                    </div>
-                    <div class="app-card-name">小红帽盒子</div>
-                    <div class="app-desc">月/季/年卡</div>
-                    <span class="app-btn">前往详情</span>
-                </a>
-                <a href="detail.html" class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app7.png" alt="">
-                    </div>
-                    <div class="app-card-name">91达人</div>
-                    <div class="app-desc">月/季/年卡</div>
-                    <span class="app-btn">前往详情</span>
-                </a>
-                <a href="detail.html" class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app8.png" alt="">
-                    </div>
-                    <div class="app-card-name">SWAG</div>
-                    <div class="app-desc">月/季/年卡</div>
-                    <span class="app-btn">前往详情</span>
-                </a>
-            </div>
-        </div>
-
-        <!--折叠FAQ-->
-        <div class="collapse-wrap">
-            <div class="collapse-head">
-                <span>常见问题</span>
-                <span class="collapse-icon">+</span>
-            </div>
-            <div class="collapse-body">
-                <p>1、卡密购买之后如何激活？进入APP内找到激活入口输入卡密即可开通。</p>
-                <p>2、下载打不开：安卓请允许未知来源安装；苹果使用签名证书安装。</p>
-                <p>3、无法使用请联系客服排查账号状态。</p>
-            </div>
-        </div>
-
-        <!--页脚文字-->
-        <div class="site-footer">
-            <div class="site-footer-main">本网站仅提供产品介绍</div>
-            <div>Copyright © 2026 box226.com</div>
+        <div class="promo-dots" id="promoDots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 </div>
 
-<!--底部四按钮导航【原版：首页、购买卡密、订单查询、客服】-->
-<div class="bottom-nav">
-    <a class="nav-item active" href="index.html">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
-        <span>首页</span>
-    </a>
-    <a class="nav-item" href="#">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"></path></svg>
-        <span>购买卡密</span>
-    </a>
-    <a class="nav-item" href="#">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-        <span>订单查询</span>
-    </a>
-    <a class="nav-item" href="service.html">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"></path></svg>
-        <span>客服</span>
+<div class="marquee-wrap">
+    <div class="marquee-bar">
+        <span class="marquee-icon">
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M3 10.2v3.6a1 1 0 0 0 1 1h1.8l5 4.2V5L5.8 9.2H4a1 1 0 0 0-1 1z"/>
+    <path d="M16 9.3a3 3 0 0 1 0 5.4"/>
+    <path d="M18.6 6.3a7 7 0 0 1 0 11.4"/>
+</svg>
+        </span>
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>所有软件内广告切勿点击，不要相信各类充值诱导，请勿进行任何充值消费！凡是因软件内部广告充值被骗，全部损失均与本站无关，请提高警惕谨防受骗。</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TG引流按钮，路径、文案不变；增加外链安全属性利于SEO -->
+<div class="tg-banner">
+    <a href="https://t.me/dongni226" target="_blank" rel="noopener noreferrer">
+        🔥直播平台免费下载 | 点击加入TG群组获取(实时更新)
     </a>
 </div>
 
-<!--回到顶部按钮-->
-<button id="backToTop" class="back-to-top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>
+<div class="content">
+    <div class="category-section">
+        <div class="category-head">
+            <!-- 首页唯一H1标签【已优化SEO】 -->
+            <h1 class="category-title">聚合直播盒子｜懂你live、鲍鱼盒子、污贼live下载</h1>
+        </div>
+        <div class="category-subtitle">一站式，玩转各类聚合直播盒子</div>
+        <div class="app-grid">
+            <a href="./live/dongni.html" class="app-card">
+                <div class="app-icon">
+                    <img src="./images/dongni.png" alt="懂你live盒子">
+                </div>
+                <h3 class="app-card-name">懂你live盒子</h3>
+                <p class="app-desc">邀请码:226226</p>
+                <span class="app-btn">懂你下载</span>
+            </a>
+            <a href="./live/baoyu.html" class="app-card">
+                <div class="app-icon">
+                    <img src="./images/baoyu.png" alt="鲍鱼盒子">
+                </div>
+                <h3 class="app-card-name">鲍鱼盒子</h3>
+                <p class="app-desc">邀请码:5018703</p>
+                <span class="app-btn">鲍鱼下载</span>
+            </a>
+            <a href="./live/wuzei.html" class="app-card">
+                <div class="app-icon">
+                    <img src="./images/wuzei.png" alt="污贼live盒子">
+                </div>
+                <h3 class="app-card-name">污贼live盒子</h3>
+                <p class="app-desc">邀请码:180000</p>
+                <span class="app-btn">污贼下载</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="category-section">
+        <div class="category-head">
+            <h2 class="category-title">影视tv</h2>
+        </div>
+        <div class="category-subtitle">影视TV盒子，高清影视，即点即播</div>
+        <div class="app-grid">
+            <a href="./tv/chengguo.html" class="app-card">
+                <div class="app-icon">
+                    <img src="./images/chengguo.png" alt="橙果tv">
+                </div>
+                <h3 class="app-card-name">橙果tv</h3>
+                <p class="app-desc">邀请码:226226</p>
+                <span class="app-btn">橙果下载</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="category-section">
+        <div class="category-head">
+            <h2 class="category-title">直播平台</h2>
+        </div>
+        <div class="category-subtitle">优质平台｜免费下载</div>
+        <div class="app-grid">
+            <a href="./live/duocai.html" class="app-card">
+                <div class="app-icon">
+                    <img src="./images/duocai.png" alt="多彩">
+                </div>
+                <h3 class="app-card-name">多彩</h3>
+                <p class="app-desc">半糖/七彩</p>
+                <span class="app-btn">下载</span>
+            </a>
+            <a href="./live/xiaohongmao.html" class="app-card">
+                <div class="app-icon">
+                    <img src="./images/xiaohongmao.png" alt="小红帽">
+                </div>
+                <h3 class="app-card-name">小红帽</h3>
+                <p class="app-desc">发现精彩</p>
+                <span class="app-btn">下载</span>
+            </a>
+            <a href="./live/faqishequ.html" class="app-card">
+                <div class="app-icon">
+                    <img src="./images/fanqieshequ.png" alt="91达人">
+                </div>
+                <h3 class="app-card-name">91达人</h3>
+                <p class="app-desc">原番茄社区</p>
+                <span class="app-btn">下载</span>
+            </a>
+            <a href="./live/swag.html" class="app-card">
+                <div class="app-icon">
+                    <img src="./images/swag.png" alt="swag">
+                </div>
+                <h3 class="app-card-name">swag</h3>
+                <p class="app-desc">台湾直播</p>
+                <span class="app-btn">下载</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 可折叠：站点简介【文字已经优化精简】 -->
+    <div class="collapse-wrap">
+        <div class="collapse-head" onclick="toggleCollapse(this)">
+            <span>站点简介</span>
+            <span class="collapse-icon">+</span>
+        </div>
+        <div class="collapse-body">
+            欢迎来到直播盒子官网，本站汇集懂你live盒子、污贼live盒子、鲍鱼盒子、橙果TV等聚合直播与影视APP，提供最新安装包下载，支持月卡、季卡、年卡办理与邀请码获取。同时提供多彩、小红帽、91达人、swag直播平台资源。认准本站唯一域名www.box226.com，谨防钓鱼仿冒网站。
+        </div>
+    </div>
+
+    <!-- 可折叠：常见问题 -->
+    <div class="collapse-wrap">
+        <div class="collapse-head" onclick="toggleCollapse(this)">
+            <span>常见问题</span>
+            <span class="collapse-icon">+</span>
+        </div>
+        <div class="collapse-body">
+            <div><strong>聚合直播盒子在哪里下载最新版？</strong><br>首页对应卡片点击下载，获取懂你live盒子、污贼live盒子、鲍鱼盒子、橙果TV最新安装包。</div>
+            <div><strong>卡密、邀请码怎么使用？</strong><br>底部导航进入购买卡密，办理年卡/季卡/月卡获取卡密邀请码，APP内激活；订单查询查看记录。</div>
+            <div><strong>多彩、小红帽、91达人、swag在哪获取？</strong><br>首页上方入口可以查看相关资源。</div>
+            <div><strong>如何识别钓鱼网站？</strong><br>唯一官方域名www.box226.com，不要点开陌生第三方链接。</div>
+        </div>
+    </div>
+</div>
+
+<div class="site-footer">
+    <div class="site-footer-main">✅ 一站聚合 · 优质应用 · 安全下载 </div>
+    <div class="site-footer-copy">© 2026 直播盒子官网 · <a href="https://www.box226.com/" target="_blank" rel="noopener noreferrer">www.box226.com</a></div>
+</div>
+
+</div>
+
+<!-- 返回顶部按钮 -->
+<button class="back-to-top" id="backToTop">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5"></path>
+        <path d="M5 12l7-7 7 7"></path>
+    </svg>
 </button>
 
-<!--引入JS（轮播+回到顶部）-->
-<script src="js/main.js"></script>
+<!-- 底部固定导航：完全保留原有路径 ./kefu/service.html -->
+<div class="bottom-nav">
+    <a href="#" class="nav-item active">
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M3 11.2 12 4l9 7.2"/>
+    <path d="M5.5 9.8V20a1 1 0 0 0 1 1H9v-6h6v6h2.5a1 1 0 0 0 1-1V9.8"/>
+</svg>
+        <span>首页</span>
+    </a>
+    <a href="https://shop.yzdj66.com/shop/box226" class="nav-item" rel="noopener noreferrer">
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="2" y="5" width="20" height="14" rx="2"/>
+    <line x1="2" y1="10" x2="22" y2="10"/>
+</svg>
+        <span>购买卡密</span>
+    </a>
+    <a href="https://shop.yzdj66.com/order" class="nav-item" rel="noopener noreferrer">
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M9 12h6M9 16h6M7 3h10l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/>
+</svg>
+        <span>订单查询</span>
+    </a>
+    <a href="./kefu/service.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+            <span>客服</span>
+    </a>
+</div>
 
+<script>
+function toggleCollapse(el){
+    const body = el.nextElementSibling;
+    const icon = el.querySelector(".collapse-icon");
+    body.classList.toggle("open");
+    icon.classList.toggle("open");
+    icon.textContent = body.classList.contains("open") ? "−" : "+";
+}
+</script>
+<script src="./js/main.js"></script>
 </body>
 </html>
