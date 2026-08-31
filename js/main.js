@@ -51,14 +51,13 @@
     track.addEventListener('touchstart', stopAuto);
     track.addEventListener('mouseenter', stopAuto);
 
-    // touchend/mouseleave 增加延时，滑动完成后再开启自动轮播
     track.addEventListener('touchend', function () {
-        setTimeout(startAuto, 300);
+        setTimeout(startAuto, 200);
     });
     track.addEventListener('mouseleave', startAuto);
 
-    // 等待页面图片、布局完全渲染，再启动轮播，修复图片加载慢初始错位
-    window.addEventListener('load', function(){
+    // DOM渲染完毕就启动，不等大图片全部下载，解决轮播迟迟不启动
+    document.addEventListener('DOMContentLoaded', function(){
         goTo(0);
         startAuto();
     });
