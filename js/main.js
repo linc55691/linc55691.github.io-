@@ -1,4 +1,4 @@
-//轮播逻辑
+//轮播逻辑 修复：末尾卡住不循环
 (function() {
     var track = document.getElementById('promoTrack');
     var dots = document.getElementById('promoDots');
@@ -9,11 +9,16 @@
     var dotEls = dots ? dots.children : [];
     var current = 0;
     var autoTimer = null;
+    var isAnimating = false;
 
     function goTo(index) {
+        if(isAnimating) return;
         current = (index + slides) % slides;
+        isAnimating = true;
         track.scrollTo({ left: track.clientWidth * current, behavior: 'smooth' });
         updateDots();
+        //动画锁，防止连续点击触发错乱
+        setTimeout(function(){ isAnimating = false; },450);
     }
 
     function updateDots() {
@@ -26,7 +31,7 @@
         stopAuto();
         autoTimer = setInterval(function() {
             goTo(current + 1);
-        }, 4000);
+        }, 4200);
     }
 
     function stopAuto() {
@@ -41,25 +46,27 @@
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(function() {
             var page = Math.round(track.scrollLeft / track.clientWidth);
-            if(page !== current){
+            if(page !== current && !isAnimating){
                 current = page;
                 updateDots();
             }
-        }, 100);
+        }, 120);
     });
 
     track.addEventListener('touchstart', stopAuto);
     track.addEventListener('mouseenter', stopAuto);
 
     track.addEventListener('touchend', function () {
-        setTimeout(startAuto, 200);
+        setTimeout(startAuto, 300);
     });
     track.addEventListener('mouseleave', startAuto);
 
-    // DOM渲染完毕就启动，不等大图片全部下载，解决轮播迟迟不启动
-    document.addEventListener('DOMContentLoaded', function(){
-        goTo(0);
-        startAuto();
+    //加长延时，等待图片+布局全部渲染完毕
+    window.addEventListener('load', function(){
+        setTimeout(function(){
+            goTo(0);
+            startAuto();
+        },700);
     });
 
 })();
