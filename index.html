@@ -56,6 +56,17 @@
 
     <!-- 外部CSS，保持原有相对路径不修改 -->
     <link rel="stylesheet" href="./css/style.css">
+<style>
+/* 修复跑马灯只能跑到中间，文字截断看不到尾部 */
+.marquee-wrap{overflow:hidden;width:100%;}
+.marquee-bar{display:flex;align-items:center;gap:12px;white-space:nowrap;}
+.marquee-track{width:100%;overflow:hidden;}
+.marquee-content{display:inline-block;animation:marqueeMove 18s linear infinite;}
+@keyframes marqueeMove {
+  0%{transform:translateX(100%);}
+  100%{transform:translateX(-100%);}
+}
+</style>
 </head>
 <body>
 <div class="page-shell">
@@ -72,17 +83,17 @@
         <div class="promo-track" id="promoTrack">
             <div class="promo-slide">
                 <div class="promo-noclick">
-                    <img src="./images/lunbo-1.jpg" alt="直播盒子官网首页">
+                    <img src="./images/lunbo-1.jpg" alt="直播盒子官网首页" width="750" height="360" loading="lazy" decoding="async">
                 </div>
             </div>
             <div class="promo-slide">
                 <div class="promo-noclick">
-                    <img src="./images/lunbo-2.jpg" alt="多款直播盒子卡密服务">
+                    <img src="./images/lunbo-2.jpg" alt="多款直播盒子卡密服务" width="750" height="360" loading="lazy" decoding="async">
                 </div>
             </div>
             <div class="promo-slide">
                 <div class="promo-noclick">
-                    <img src="./images/lunbo-3.jpg" alt="直播APP下载入口">
+                    <img src="./images/lunbo-3.jpg" alt="直播APP下载入口" width="750" height="360" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -121,8 +132,8 @@
 <div class="content">
     <div class="category-section">
         <div class="category-head">
-            <!-- 首页唯一H1标签，SEO重点 -->
-            <h1 class="category-title">直播盒子</h1>
+            <!-- 首页唯一H1标签【已优化SEO】 -->
+            <h1 class="category-title">聚合直播盒子｜懂你live、鲍鱼盒子、污贼live下载</h1>
         </div>
         <div class="category-subtitle">一站式，玩转各类聚合直播盒子</div>
         <div class="app-grid">
@@ -211,14 +222,14 @@
         </div>
     </div>
 
-    <!-- 可折叠：站点简介 -->
+    <!-- 可折叠：站点简介【文字已经优化精简】 -->
     <div class="collapse-wrap">
         <div class="collapse-head" onclick="toggleCollapse(this)">
             <span>站点简介</span>
             <span class="collapse-icon">+</span>
         </div>
         <div class="collapse-body">
-            欢迎来到直播盒子官网，本站作为聚合直播盒子综合站点，汇集懂你live盒子、污贼live盒子、鲍鱼盒子、橙果TV多款应用。提供懂你live盒子年卡、污贼live盒子季卡、鲍鱼盒子月卡办理，橙果TV邀请码与卡密获取。同时提供多彩、小红帽、91达人、蜜语、swag各类直播APP下载，也有影视TV盒子可以体验高清影视播放。所有应用均为最新版，下载安装便捷，卡密、邀请码可前往购买卡密页面办理，订单查询查看购买记录。
+            欢迎来到直播盒子官网，本站汇集懂你live盒子、污贼live盒子、鲍鱼盒子、橙果TV等聚合直播与影视APP，提供最新安装包下载，支持月卡、季卡、年卡办理与邀请码获取。同时提供多彩、小红帽、91达人、swag直播平台资源。认准本站唯一域名www.box226.com，谨防钓鱼仿冒网站。
         </div>
     </div>
 
@@ -231,7 +242,7 @@
         <div class="collapse-body">
             <div><strong>聚合直播盒子在哪里下载最新版？</strong><br>首页对应卡片点击下载，获取懂你live盒子、污贼live盒子、鲍鱼盒子、橙果TV最新安装包。</div>
             <div><strong>卡密、邀请码怎么使用？</strong><br>底部导航进入购买卡密，办理年卡/季卡/月卡获取卡密邀请码，APP内激活；订单查询查看记录。</div>
-            <div><strong>多彩、小红帽、91达人、蜜语、swag在哪获取？</strong><br>首页上方入口可以查看相关资源。</div>
+            <div><strong>多彩、小红帽、91达人、swag在哪获取？</strong><br>首页上方入口可以查看相关资源。</div>
             <div><strong>如何识别钓鱼网站？</strong><br>唯一官方域名www.box226.com，不要点开陌生第三方链接。</div>
         </div>
     </div>
@@ -252,7 +263,7 @@
     </svg>
 </button>
 
-<!-- 底部固定导航：**完全保留原有路径 ./kefu/service.html 不改动**；第三方商城链接补充安全rel属性 -->
+<!-- 底部固定导航：完全保留原有路径 ./kefu/service.html -->
 <div class="bottom-nav">
     <a href="#" class="nav-item active">
 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
