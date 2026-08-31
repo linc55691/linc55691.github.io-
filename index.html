@@ -104,6 +104,17 @@
         </div>
     </div>
 </div>
+<style>
+.marquee-wrap{overflow:hidden;width:100%;}
+.marquee-bar{display:flex;align-items:center;gap:12px;white-space:nowrap;}
+.marquee-track{width:100%;overflow:hidden;}
+.marquee-content{display:inline-block;animation:marqueeMove 18s linear infinite;}
+/* 双文本无缝，消除回退空白 */
+@keyframes marqueeMove {
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+</style>
 
 <div class="marquee-wrap">
     <div class="marquee-bar">
@@ -115,12 +126,16 @@
 </svg>
         </span>
         <div class="marquee-track">
+            <!-- 复制两遍一模一样文字，实现无缝循环，没有空白间隔 -->
             <div class="marquee-content">
+                <span>所有软件内广告切勿点击，不要相信各类充值诱导，请勿进行任何充值消费！凡是因软件内部广告充值被骗，全部损失均与本站无关，请提高警惕谨防受骗。</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <span>所有软件内广告切勿点击，不要相信各类充值诱导，请勿进行任何充值消费！凡是因软件内部广告充值被骗，全部损失均与本站无关，请提高警惕谨防受骗。</span>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- TG引流按钮，路径、文案不变；增加外链安全属性利于SEO -->
 <div class="tg-banner">
