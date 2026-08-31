@@ -95,7 +95,7 @@ svg.icon {
     justify-content: center;
 }
 
-/* ===================== 首页轮播 promo【修复完成】 ===================== */
+/* ===================== 首页轮播 promo【适配scrollTo JS最终修复版】 ===================== */
 .promo-wrap {
     margin: 14px 0;
 }
@@ -107,6 +107,14 @@ svg.icon {
 }
 .promo-track {
     display: flex;
+    overflow‑x: auto;
+    scroll‑behavior: smooth;
+    -ms‑overflow‑style: none;
+    scrollbar‑width: none;
+}
+/* 隐藏滚动条 */
+.promo-track::-webkit-scrollbar {
+    display: none;
 }
 .promo-slide {
     flex: 0 0 100%;
