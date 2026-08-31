@@ -95,7 +95,7 @@ svg.icon {
     justify-content: center;
 }
 
-/* ===================== 首页轮播 promo【已修复】 ===================== */
+/* ===================== 首页轮播 promo【修复完成】 ===================== */
 .promo-wrap {
     margin: 14px 0;
 }
@@ -107,7 +107,6 @@ svg.icon {
 }
 .promo-track {
     display: flex;
-    overflow‑x: hidden;
 }
 .promo-slide {
     flex: 0 0 100%;
@@ -142,7 +141,7 @@ svg.icon {
     border-radius:3px;
 }
 
-/* ===================== 跑马灯 marquee ===================== */
+/* ===================== 跑马灯 marquee【修复：慢速度+无缝无留白】 ===================== */
 .marquee-wrap {
     margin:12px 0;
 }
@@ -168,11 +167,12 @@ svg.icon {
 }
 .marquee-content {
     white-space: nowrap;
-    animation: marquee-scroll 18s linear infinite;
+    display: inline-block;
+    animation: marquee-scroll 30s linear infinite;
 }
 @keyframes marquee-scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    100% { transform: translateX(-50%); }
 }
 
 /* ===================== TG banner ===================== */
